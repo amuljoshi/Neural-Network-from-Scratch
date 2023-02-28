@@ -44,9 +44,12 @@ X =  [[1, 2, 3, 2.5],
 class Layer_Dense:
     def __init__(self, n_inputs, n_neurons):
         self.weights = 0.10 * np.random.randn(n_inputs, n_neurons)
+        # print(self.weights)
         self.biases =  np.zeros((1, n_neurons))
+        # print(self.biases)
     def forward(self, inputs):
         self.output = np.dot(inputs, self.weights) + self.biases
+        # print(self.output)
 
 layer1 = Layer_Dense(4,5)
 layer2 = Layer_Dense(5,2)
